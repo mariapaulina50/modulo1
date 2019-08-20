@@ -1,0 +1,7 @@
+C:\Users\Smith\Desktop\Modulo_2\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Smith\Desktop\Modulo_2\Modelo\bin\Debug\Modelo.dll
+C:\Users\Smith\Desktop\Modulo_2\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Smith\Desktop\Modulo_2\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Smith\Desktop\Modulo_2\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Smith\Desktop\Modulo_2\Modelo\obj\Debug\Modelo.dll
+C:\Users\Smith\Desktop\Modulo_2\Modelo\obj\Debug\Modelo.pdb
