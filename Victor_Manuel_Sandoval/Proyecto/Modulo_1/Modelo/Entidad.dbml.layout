@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Entidad">
+  <DataContextMoniker Name="/EntidadDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c6c9f837-704b-419a-b877-d8c030fe5751" absoluteBounds="0.75, 3.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/EntidadDataContext/clientes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d06e258-bcf1-49b4-88e7-6ea5966ba3a0" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b2bab8a-48bb-469a-a647-ba905cab1f6b" absoluteBounds="0.75, 1, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/EntidadDataContext/roles" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aee22562-7904-40de-a8ff-05f5e009d558" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="176fea34-9796-4719-aaed-e5814610bbc4" absoluteBounds="3.5, 0.875, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/EntidadDataContext/usuarios" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1dcc21d3-852d-434e-9ed5-118464f6a3b6" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.59699625651042); (3.5 : 1.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EntidadDataContext/roles/roles_usuarios" />
+      <nodes>
+        <classShapeMoniker Id="4b2bab8a-48bb-469a-a647-ba905cab1f6b" />
+        <classShapeMoniker Id="176fea34-9796-4719-aaed-e5814610bbc4" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
