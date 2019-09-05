@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Proyecto" Class="EntidadDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-KVFVBVV\VICTOR;Initial Catalog=Proyecto;Integrated Security=True" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="ProyectoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.clientes" Member="clientes">
+    <Type Name="clientes">
+      <Column Name="idCliente" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="documento" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="usuarios_clientes" Member="usuarios" ThisKey="idUsuario" OtherKey="idUsuario" Type="usuarios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.usuarios" Member="usuarios">
+    <Type Name="usuarios">
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="correo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="clave" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="idRol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="usuarios_clientes" Member="clientes" ThisKey="idUsuario" OtherKey="idUsuario" Type="clientes" />
+      <Association Name="usuarios_empleados" Member="empleados" ThisKey="idUsuario" OtherKey="idUsuario" Type="empleados" />
+      <Association Name="roles_usuarios" Member="roles" ThisKey="idRol" OtherKey="idRol" Type="roles" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.empleados" Member="empleados">
+    <Type Name="empleados">
+      <Column Name="idEmpleado" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="documento" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="usuarios_empleados" Member="usuarios" ThisKey="idUsuario" OtherKey="idUsuario" Type="usuarios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.roles" Member="roles">
+    <Type Name="roles">
+      <Column Name="idRol" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombreRol" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="roles_usuarios" Member="usuarios" ThisKey="idRol" OtherKey="idRol" Type="usuarios" />
+    </Type>
+  </Table>
+</Database>
