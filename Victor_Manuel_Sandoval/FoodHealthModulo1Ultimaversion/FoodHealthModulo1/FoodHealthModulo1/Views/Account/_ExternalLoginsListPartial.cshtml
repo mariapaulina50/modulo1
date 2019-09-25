@@ -1,0 +1,28 @@
+﻿@model FoodHealthModulo1.Models.ExternalLoginListViewModel
+@using Microsoft.Owin.Security
+
+
+@{
+    var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
+    if (loginProviders.Count() == 0) {
+
+<div class="container" style="background-color:aliceblue">
+    <h4 style="background-color:aliceblue">FoodHealth de la mano con nuestros clientes.</h4>
+    <p>
+        Recuerda qué tus datos están siempre seran privados para los demas clientes, no compartiremos tu informacion personal en ningun caso.
+    </p>
+</div>
+    }
+    else {
+        using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = Model.ReturnUrl })) {
+            @Html.AntiForgeryToken()
+            <div id="socialLoginList">
+                <p>
+                    @foreach (AuthenticationDescription p in loginProviders) {
+                        <button type="submit" class="btn btn-default" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Inicie sesión con su cuenta @p.Caption">@p.AuthenticationType</button>
+                    }
+                </p>
+            </div>
+        }
+    }
+}

@@ -1,0 +1,104 @@
+﻿@model IEnumerable<FoodHealthModulo1.Models.Cliente>
+
+<body style="background-color:#9FF781">
+
+    @{
+        ViewBag.Title = "Inicio-Clientes";
+    }
+
+    <h2 style="margin-top:5px">Inicio</h2>
+
+    <p>
+        @Html.ActionLink("Crear cliente", "Create")
+    </p>
+    <table class="table bg-light">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DocumentType.DocumentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clave)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_de_nacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pais)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocumentType.DocumentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Documento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clave)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_de_nacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pais)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ciudad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                <a class="dropdown-item text-white" style="margin-left:7px" href="#">@Html.ActionLink("Editar Cliente", "Edit", new { id = item.ClienteID })</a>
+                @Html.ActionLink("Detalles cliente", "Details", new { id = item.ClienteID }) |
+                @Html.ActionLink("Borrar cliente", "Delete", new { id = item.ClienteID })
+            </td>
+        </tr>
+        }
+
+
+    </table>
+</body>

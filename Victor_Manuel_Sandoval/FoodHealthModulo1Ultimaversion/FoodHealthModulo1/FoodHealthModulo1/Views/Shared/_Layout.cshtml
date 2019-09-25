@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Food/Health</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ffffff";>
+        @Html.ActionLink("Food/Health", "Index", "Home", routeValues: null, htmlAttributes: new { id = "Index id", @class = "navbar-brand" })
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Acerca de<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Contactanos</a>
+                </li>
+                <li class="nav-item active">
+                    @Html.ActionLink("Agenda", "Index", "Diaries", routeValues: null, htmlAttributes: new { id = "Index id", @class = "nav-link" })
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Administrar
+                    </a>
+
+                    <div class="dropdown-menu" style="background-color:#2E2E2E" aria-labelledby="navbarDropdownMenuLink">
+                        <h6 style="margin-left:7px"><a class="dropdown-item " href="#">@Html.ActionLink("Clientes", "Index", "Clientes", routeValues: null, htmlAttributes: new { id = "Index id", @class= "text-black" })</a></h6>
+                        <h6 style="margin-left:7px"><a class="dropdown-item text-white" href="#">@Html.ActionLink("Tipo de documento", "Index", "DocumentTypes", routeValues: null, htmlAttributes: new { id = "Index id",  @class = "text-black" })</a></h6>
+                        <h6 style="margin-left:7px"><a class="dropdown-item text-white" href="#">@Html.ActionLink("Empleado", "Index", "Employees", routeValues: null, htmlAttributes: new { id = "Index id",  @class = "text-black" })</a></h6>
+                        <h6 style="margin-left:7px"><a class="dropdown-item text-white" href="#">@Html.ActionLink("Tipo de rol", "Index", "Roles", routeValues: null, htmlAttributes: new { id = "Index id",  @class = "text-black" })</a></h6>
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+        @Html.Partial("_LoginPartial")
+    </nav>
+
+
+</head>
+<body>
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Food/Health</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

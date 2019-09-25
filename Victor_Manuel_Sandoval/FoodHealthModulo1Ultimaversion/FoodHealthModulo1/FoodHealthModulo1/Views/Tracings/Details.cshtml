@@ -1,0 +1,98 @@
+﻿@model FoodHealthModulo1.Models.Tracing
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tracing</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_de_seguimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_de_seguimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Peso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Peso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estatura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estatura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medida_de_cuello)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medida_de_cuello)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medida_de_busto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medida_de_busto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medida_de_cintura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medida_de_cintura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grasa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grasa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medida_de_pierna_derecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medida_de_pierna_derecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medida_de_pierna_izquierda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medida_de_pierna_izquierda)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TracingID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
