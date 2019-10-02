@@ -1,0 +1,39 @@
+﻿@model FoodHealthModulo1Final.Models.Packages.PackageType
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="container-fluid rounded" style="background-color: #F5F5F5 ;">
+            <h3 class="text-danger" style="padding-top:80px">¿Esta seguro de borrar esto?</h3>
+            <div>
+                <hr />
+                <h4>Borrar tipo de paquete</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Duration)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Duration)
+                    </dd>
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Borrar" class="btn btn-outline-danger" /> |
+                        @Html.ActionLink("Volver a la Lista", "Index")
+                    </div>
+                    <br />
+                }
+            </div>
+        </div>
+    </div>
+</header>

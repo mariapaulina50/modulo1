@@ -1,0 +1,110 @@
+﻿@model FoodHealthModulo1Final.Models.Profiles.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="container-fluid rounded" style="background-color: #F5F5F5 ;">
+            <h4 style="padding-top:30px">Detalles de Cliente</h4>
+            <br />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.DocumentTypes.NameDocument)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DocumentTypes.NameDocument)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Role.RoleName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Role.RoleName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Document)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Document)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Salary)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Salary)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DateOfBirth)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DateOfBirth)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Phone)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Phone)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Usuario)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Usuario)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Clave)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Clave)
+                </dd>
+
+            </dl>
+            <p>
+                @Html.ActionLink("Editar", "Edit", new { id = Model.EmployeId }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Volver a la Lista", "Index", new { }, new { @class = "btn btn-secondary" })
+            </p>
+        </div>
+        <br />
+    </div>
+</header>

@@ -1,0 +1,28 @@
+﻿@model FoodHealthModulo1Final.Models.Profiles.DocumentType
+
+@{
+    ViewBag.Title = "Details";
+}
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="container-fluid rounded" style="background-color: #F5F5F5 ;">
+            <h4 style="padding-top:80px">Detalles Tipo de Documento</h4>
+            <br />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.NameDocument)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.NameDocument)
+                </dd>
+
+            </dl>
+            <p>
+                @Html.ActionLink("Editar", "Edit", new { id = Model.DocumentTypeID }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Volver a la Lista", "Index", new { }, new { @class = "btn btn-secondary" })
+            </p>
+            <br />
+        </div>
+    </div>
+</header>

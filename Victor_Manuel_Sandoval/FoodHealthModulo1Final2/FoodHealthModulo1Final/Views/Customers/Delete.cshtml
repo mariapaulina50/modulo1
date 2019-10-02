@@ -1,0 +1,87 @@
+﻿@model FoodHealthModulo1Final.Models.Profiles.Customer
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="container-fluid rounded" style="background-color: #F5F5F5 ;margin-top:60px">
+            <h3 class="text-danger">¿Esta seguro de borrar esto?</h3>
+            <div>
+                <hr />
+                <h4>Borrar Cliente</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DocumentType.NameDocument)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.DocumentType.NameDocument)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Document)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Document)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.FirstName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.LastName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Phone)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Phone)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Address)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Address)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+                        @Html.ActionLink("Volver a la Lista", "Index", new { }, new { @class = "btn btn-secondary" })
+                    </div>
+                    <br />
+                }
+            </div>
+        </div>
+    </div>
+</header>
